@@ -1,7 +1,27 @@
 @{
 ViewBag.Title= "Basvuru Formu";
 }
-<h1 class="h4">Toplanti Katilim Form</h1>
+<h1 class="h4 text-center">Toplanti Katilim Form</h1>
 <form action="">
+    <div class="mb-3">
+        <label for="Name" class="form-label">Name</label>
+        <input type="text" name="Name" id="Name" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="Phone" class="form-label">Phone</label>
+        <input type="text" name="Phone" id="Phone" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="Email" class="form-label">Email</label>
+        <input type="email" name="Email" id="Email" class="form-control">
+    </div>
+    <div class="mb-3">
+        <label for="WillAttend" class="form-label">Will Attend</label>
+        <select name="WillAttend" id="WillAttend" class="form-select">
+            <option value="true"> YES</option>
+            <option value="false">NO</option>
+        </select>
+    </div>
+    <div class="mb-3"></div>
     <button type="submit" class="btn btn-primary">Kaydet</button>
 </form>
