@@ -1,3 +1,4 @@
+using MeetingApplicationProject.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 
@@ -16,7 +17,16 @@ namespace MeetingApllicationProject.Controllers
 
             ViewBag.Selamlama = saat > 12 ? "İyi Günler" : "Günaydin";
             ViewBag.UserName = "Mucahit";
-            return View();
+
+            var meetingInfo = new MeetingInfo()
+            {
+                Id = 1,
+                Location = "Ankara'da Mucahitin Istedigi Yer.",
+                Date = new DateTime(2024, 04, 03, 20, 0, 0),
+                NumberOfPeople = 100
+            };
+
+            return View(meetingInfo);
         }
     }
 }
